@@ -1,7 +1,7 @@
 # Kobold RPG
 This is a game being made for [GGJ 2024](https://globalgamejam.org/).
 
-# Getting started.
+# Getting started
 You're first going to need to clone the repo.
 
 ```sh
