@@ -1,6 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b30bap7jpg6qr"]
+[gd_scene load_steps=12 format=3 uid="uid://b30bap7jpg6qr"]
 
+[ext_resource type="Texture2D" uid="uid://c6jpg8xh2jurn" path="res://resources/images/gridbox.png" id="1_4r8wo"]
 [ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/images/Kobold Idle.png" id="1_enbii"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_y8jeb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hal8v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgjef"]
 atlas = ExtResource("1_enbii")
@@ -59,13 +63,24 @@ animations = [{
 
 [node name="Root" type="Node2D"]
 
-[node name="Player" type="Node2D" parent="."]
+[node name="Gridbox" type="Sprite2D" parent="."]
+position = Vector2(9, 33)
+scale = Vector2(4.53711, 4.53711)
+texture = ExtResource("1_4r8wo")
+
+[node name="Player" type="CharacterBody2D" parent="."]
 scale = Vector2(5, 5)
+script = ExtResource("1_y8jeb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_hal8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_eeoet")
 animation = &"Idle (Front)"
 autoplay = "Idle (Front)"
 frame_progress = 0.046905
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(0.2, 0.2)
