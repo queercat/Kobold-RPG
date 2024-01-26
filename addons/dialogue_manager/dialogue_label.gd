@@ -1,8 +1,10 @@
 @icon("./assets/icon.svg")
+
 @tool
 
 ## A RichTextLabel specifically for use with [b]Dialogue Manager[/b] dialogue.
 class_name DialogueLabel extends RichTextLabel
+
 
 ## Emitted for each letter typed out.
 signal spoke(letter: String, letter_index: int, speed: float)
@@ -15,6 +17,7 @@ signal skipped_typing()
 
 ## Emitted when typing finishes.
 signal finished_typing()
+
 
 # The action to press to skip typing.
 @export var skip_action: StringName = &"ui_cancel"
@@ -35,6 +38,7 @@ signal finished_typing()
 
 ## The amount of time to pause when exposing a character present in pause_at_characters.
 @export var seconds_per_pause_step: float = 0.3
+
 
 ## The current line of dialogue.
 var dialogue_line:
@@ -58,6 +62,7 @@ var _last_wait_index: int = -1
 var _last_mutation_index: int = -1
 var _waiting_seconds: float = 0
 
+
 func _process(delta: float) -> void:
 	if self.is_typing:
 		# Type out text
@@ -72,6 +77,15 @@ func _process(delta: float) -> void:
 			# Make sure any mutations at the end of the line get run
 			_mutate_inline_mutations(get_total_character_count())
 			self.is_typing = false
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Note: this will no longer be reached if using Dialogue Manager > 2.32.2. To make skip handling
+	# simpler (so all of mouse/keyboard/joypad are together) it is now the responsibility of the
+	# dialogue balloon.
+	if self.is_typing and visible_ratio < 1 and InputMap.has_action(skip_action) and event.is_action_pressed(skip_action):
+		get_viewport().set_input_as_handled()
+		skip_typing()
 
 
 ## Start typing out the text
@@ -95,12 +109,14 @@ func type_out() -> void:
 		visible_characters = get_total_character_count()
 		self.is_typing = false
 
+
 ## Stop typing out the text and jump right to the end
 func skip_typing() -> void:
 	_mutate_remaining_mutations()
 	visible_characters = get_total_character_count()
 	self.is_typing = false
 	skipped_typing.emit()
+
 
 # Type out the next character(s)
 func _type_next(delta: float, seconds_needed: float) -> void:
@@ -133,9 +149,11 @@ func _type_next(delta: float, seconds_needed: float) -> void:
 		else:
 			_type_next(delta, seconds_needed)
 
+
 # Get the pause for the current typing position if there is one
 func _get_pause(at_index: int) -> float:
 	return dialogue_line.pauses.get(at_index, 0)
+
 
 # Get the speed for the current typing position
 func _get_speed(at_index: int) -> float:

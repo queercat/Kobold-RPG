@@ -21,7 +21,6 @@ const DEFAULT_SETTINGS = {
 	create_lines_for_responses_with_characters = true
 }
 
-
 static func prepare() -> void:
 	# Migrate previous keys
 	for key in [
@@ -53,6 +52,19 @@ static func prepare() -> void:
 
 	ProjectSettings.save()
 
+
+static func reset_settings_to_default() -> void:
+	for key in [
+		"states",
+		"missing_translations_are_errors",
+		"export_characters_in_translation",
+		"wrap_lines",
+		"new_with_template",
+		"include_all_responses",
+		"custom_test_scene_path",
+		"balloon_path"
+	]:
+		set_setting(key, DEFAULT_SETTINGS[key])
 
 static func set_setting(key: String, value) -> void:
 	ProjectSettings.set_setting("dialogue_manager/general/%s" % key, value)
