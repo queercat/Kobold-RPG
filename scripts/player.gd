@@ -42,8 +42,10 @@ func _process(delta):
 
 func _physics_process(delta):
 	var direction = get_input()
+	
 	if direction.length() > 0:
 		velocity = velocity.lerp(direction.normalized() * speed, acceleration)
 	else:
 		velocity = velocity.lerp(Vector2.ZERO, friction)
+	
 	move_and_slide()
