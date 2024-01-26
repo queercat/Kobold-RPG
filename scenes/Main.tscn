@@ -54,7 +54,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle (Front)",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="Root" type="Node2D"]
@@ -65,5 +65,7 @@ scale = Vector2(5, 5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_eeoet")
 animation = &"Idle (Front)"
+autoplay = "Idle (Front)"
+frame_progress = 0.046905
 
 [node name="Camera2D" type="Camera2D" parent="."]
