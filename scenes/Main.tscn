@@ -1,3 +1,69 @@
-[gd_scene format=3 uid="uid://b30bap7jpg6qr"]
+[gd_scene load_steps=9 format=3 uid="uid://b30bap7jpg6qr"]
 
-[node name="main" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://assets/images/Kobold Idle.png" id="1_enbii"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgjef"]
+atlas = ExtResource("1_enbii")
+region = Rect2(48, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnicb"]
+atlas = ExtResource("1_enbii")
+region = Rect2(64, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmhbe"]
+atlas = ExtResource("1_enbii")
+region = Rect2(80, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81bsg"]
+atlas = ExtResource("1_enbii")
+region = Rect2(0, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abs4g"]
+atlas = ExtResource("1_enbii")
+region = Rect2(16, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4d16"]
+atlas = ExtResource("1_enbii")
+region = Rect2(32, 12, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eeoet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgjef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnicb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmhbe")
+}],
+"loop": true,
+"name": &"Idle (Back)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81bsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abs4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4d16")
+}],
+"loop": true,
+"name": &"Idle (Front)",
+"speed": 5.0
+}]
+
+[node name="Root" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+scale = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_eeoet")
+animation = &"Idle (Front)"
+
+[node name="Camera2D" type="Camera2D" parent="."]
