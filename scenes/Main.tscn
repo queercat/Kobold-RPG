@@ -43,7 +43,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_qmhbe")
 }],
 "loop": true,
-"name": &"Idle (Back)",
+"name": &"idle_back",
 "speed": 5.0
 }, {
 "frames": [{
@@ -57,7 +57,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_f4d16")
 }],
 "loop": true,
-"name": &"Idle (Front)",
+"name": &"idle_front",
 "speed": 3.0
 }]
 
@@ -78,9 +78,8 @@ shape = SubResource("RectangleShape2D_hal8v")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_eeoet")
-animation = &"Idle (Front)"
-autoplay = "Idle (Front)"
-frame_progress = 0.046905
+animation = &"idle_back"
+autoplay = "idle_front"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 scale = Vector2(0.2, 0.2)
