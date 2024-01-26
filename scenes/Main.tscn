@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b30bap7jpg6qr"]
 
-[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://assets/images/Kobold Idle.png" id="1_enbii"]
+[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/images/Kobold Idle.png" id="1_enbii"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgjef"]
 atlas = ExtResource("1_enbii")

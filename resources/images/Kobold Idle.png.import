@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://v12wpsi7yfrh"
-path="res://.godot/imported/Kobold Idle.png-b93333f0581e29a21d5705e561ca59f1.ctex"
+path="res://.godot/imported/Kobold Idle.png-6d14b33de002e49848ca9c3f0e1f3dd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Kobold Idle.png"
-dest_files=["res://.godot/imported/Kobold Idle.png-b93333f0581e29a21d5705e561ca59f1.ctex"]
+source_file="res://resources/images/Kobold Idle.png"
+dest_files=["res://.godot/imported/Kobold Idle.png-6d14b33de002e49848ca9c3f0e1f3dd5.ctex"]
 
 [params]
 

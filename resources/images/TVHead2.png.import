@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwma0bnsjxg7i"
-path="res://.godot/imported/TVHead2.png-fd0af9b54ae24fbc9853521b4c5659e5.ctex"
+path="res://.godot/imported/TVHead2.png-f9f10785cdcb6f3b2d0d1b93902284da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/TVHead2.png"
-dest_files=["res://.godot/imported/TVHead2.png-fd0af9b54ae24fbc9853521b4c5659e5.ctex"]
+source_file="res://resources/images/TVHead2.png"
+dest_files=["res://.godot/imported/TVHead2.png-f9f10785cdcb6f3b2d0d1b93902284da.ctex"]
 
 [params]
 
