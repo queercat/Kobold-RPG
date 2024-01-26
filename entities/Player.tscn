@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bya4blvpp23g8"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_j6qhp"]
-[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/images/Kobold Idle.png" id="2_0bmqs"]
+[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/spritesheets/Kobold Idle.png" id="2_0bmqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hal8v"]
 size = Vector2(16, 6.2)
