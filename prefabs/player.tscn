@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://bya4blvpp23g8"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_j6qhp"]
+[ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/images/Kobold Idle.png" id="2_0bmqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hal8v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgjef"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(48, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnicb"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(64, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmhbe"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(80, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81bsg"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(0, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abs4g"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(16, 12, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4d16"]
+atlas = ExtResource("2_0bmqs")
+region = Rect2(32, 12, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eeoet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgjef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnicb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmhbe")
+}],
+"loop": true,
+"name": &"idle_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81bsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abs4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4d16")
+}],
+"loop": true,
+"name": &"idle_front",
+"speed": 3.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_j6qhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hal8v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_eeoet")
+animation = &"idle_back"
+autoplay = "idle_front"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.2, 0.2)
