@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://v12wpsi7yfrh" path="res://resources/images/Kobold Idle.png" id="2_0bmqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hal8v"]
-size = Vector2(16, 20)
+size = Vector2(16, 6.2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgjef"]
 atlas = ExtResource("2_0bmqs")
@@ -66,7 +66,7 @@ scale = Vector2(5, 5)
 script = ExtResource("1_j6qhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5.72204e-07, 0)
+position = Vector2(5.72204e-07, 6.9)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hal8v")
 

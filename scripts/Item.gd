@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var _name: String
+@export var _description: String
 @export var _sprite: Texture2D
 
 var sprite_node: Sprite2D
