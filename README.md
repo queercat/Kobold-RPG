@@ -18,6 +18,6 @@ Then you'll need to import the project into Godot.
 
 # Contributing
 There is an [active project](https://github.com/users/queercat/projects/3) that is tracking the TODOs and what is being done. 
-Any TODOs in the backlog are safe to pull of and be worked on.
+Any TODOs in the backlog are safe to pull off and be worked on.
 
 If you believe there might be conflicting work feel free to separate out what you need into a branch and create a PR onto this.
