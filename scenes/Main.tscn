@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvlbbqduwe75x"]
+[gd_scene load_steps=4 format=3 uid="uid://cvlbbqduwe75x"]
 
 [ext_resource type="Texture2D" uid="uid://c6jpg8xh2jurn" path="res://resources/images/gridbox.png" id="1_4r8wo"]
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/player.tscn" id="2_3qnjx"]
+[ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="3_suasx"]
 
 [node name="Root" type="Node2D"]
 
@@ -11,3 +12,5 @@ scale = Vector2(4.53711, 4.53711)
 texture = ExtResource("1_4r8wo")
 
 [node name="Player" parent="." instance=ExtResource("2_3qnjx")]
+
+[node name="Camera2D" parent="." instance=ExtResource("3_suasx")]
