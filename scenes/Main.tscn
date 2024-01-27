@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c6jpg8xh2jurn" path="res://resources/images/gridbox.png" id="1_4r8wo"]
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="2_3qnjx"]
-[ext_resource type="PackedScene" path="res://entities/camera.tscn" id="3_suasx"]
+[ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="3_suasx"]
 
 [node name="Root" type="Node2D"]
 
