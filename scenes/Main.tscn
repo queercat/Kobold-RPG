@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b30bap7jpg6qr"]
+[gd_scene load_steps=3 format=3 uid="uid://cvlbbqduwe75x"]
 
 [ext_resource type="Texture2D" uid="uid://c6jpg8xh2jurn" path="res://resources/images/gridbox.png" id="1_4r8wo"]
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="2_3qnjx"]
