@@ -3,8 +3,8 @@ extends CharacterBody2D
 var animation_controller: AnimatedSprite2D
 var previous_direction: Vector2
 
-@export var speed = 200
-@export var friction = 0.1
+@export var speed = 300
+@export var friction = 1
 @export var acceleration = 0.1
 
 func _ready():
