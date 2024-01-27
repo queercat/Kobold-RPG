@@ -1,11 +1,8 @@
 extends Node
 
 @export var dialogue: DialogueResource
-@export var dialogue_entry_point: String
-
-signal entered_dialogue
+@export var dialogue_title: String
 
 func _on_body_entered(body):
-	DialogueManager.show_dialogue_balloon(dialogue, dialogue_entry_point)
-	
-	
+	if body.name == "Player":
+		DialogueManager.show_dialogue_balloon(dialogue, dialogue_title)

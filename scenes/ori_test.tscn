@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4sra2y7ktlji"]
+[gd_scene load_steps=7 format=3 uid="uid://babqqmqmf80o7"]
 
-[ext_resource type="TileSet" uid="uid://dsskeyki6wrt" path="res://resources/tilesets/dungeon_tileset.tres" id="1_w3mcs"]
+[ext_resource type="TileSet" uid="uid://45ynkpsm0466" path="res://resources/tilesets/dungeon_tileset.tres" id="1_w3mcs"]
 [ext_resource type="Texture2D" uid="uid://bqb47n5fr1kpe" path="res://resources/images/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="2_07e27"]
 [ext_resource type="Texture2D" uid="uid://b670qomxqj5lr" path="res://resources/images/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" id="3_653eq"]
 

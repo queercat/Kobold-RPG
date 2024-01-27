@@ -20,6 +20,6 @@ layer_1/tile_data = PackedInt32Array(-393225, 655360, 57, -327689, 655360, 58, -
 speed = 600
 
 [node name="DialogueArea" parent="." instance=ExtResource("3_gsprh")]
-position = Vector2(-572, -429)
+position = Vector2(-574, -474)
 dialogue = ExtResource("4_v6v60")
 dialogue_title = "this_is_a_node_title"
