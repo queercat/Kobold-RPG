@@ -298,7 +298,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running_right",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -311,9 +311,8 @@ shape = SubResource("RectangleShape2D_hal8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eeoet")
-animation = &"running_front"
+animation = &"running_right"
 autoplay = "idle_front"
-frame_progress = 0.877542
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.2, 0.2)
