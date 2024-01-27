@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4hda5j5omv24"]
+[gd_scene load_steps=5 format=3 uid="uid://d4hda5j5omv24"]
 
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="1_k5q0o"]
 [ext_resource type="TileSet" uid="uid://ch334hfr6322c" path="res://resources/tilesets/map_prototype.tres" id="1_ky20x"]
+[ext_resource type="Script" path="res://scripts/dialogue_interaction.gd" id="4_yqgn5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ft6ek"]
+radius = 187.043
 
 [node name="MapPrototype" type="Node2D"]
 
@@ -17,3 +21,14 @@ layer_1/tile_data = PackedInt32Array(-393225, 655360, 57, -327689, 655360, 58, -
 [node name="Player" parent="." instance=ExtResource("1_k5q0o")]
 speed = 600
 friction = 0.5
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-578, -476)
+script = ExtResource("4_yqgn5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ft6ek")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
