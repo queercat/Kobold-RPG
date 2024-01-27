@@ -314,7 +314,7 @@ shape = SubResource("RectangleShape2D_hal8v")
 sprite_frames = SubResource("SpriteFrames_eeoet")
 animation = &"running_front"
 autoplay = "idle_front"
-frame_progress = 0.517568
+frame_progress = 0.877542
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(0.2, 0.2)
