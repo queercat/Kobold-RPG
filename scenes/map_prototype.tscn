@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="1_k5q0o"]
 [ext_resource type="TileSet" uid="uid://ch334hfr6322c" path="res://resources/tilesets/map_prototype.tres" id="1_ky20x"]
-[ext_resource type="PackedScene" uid="uid://1ftkwofs5285" path="res://prefabs/Item_Potion.tscn" id="3_djkin"]
+[ext_resource type="PackedScene" path="res://prefabs/Item_Potion.tscn" id="3_djkin"]
 
 [node name="MapPrototype" type="Node2D"]
 
