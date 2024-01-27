@@ -1,12 +1,9 @@
 extends Node
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@export var dialogue: DialogueResource
+@export var dialogue_entry_point: String
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+signal entered_dialogue
 
 func _on_body_entered(body):
-	print(body)
+	DialogueManager.show_dialogue_balloon(dialogue, dialogue_entry_point)

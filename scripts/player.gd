@@ -7,12 +7,28 @@ var previous_direction: Vector2
 @export var friction = 1
 @export var acceleration = 0.1
 
+var can_move: bool
+
 func _ready():
 	animation_controller = $"AnimatedSprite2D"
 	previous_direction = Vector2(0, 0)
 
+	DialogueManager.got_dialogue.connect(handle_dialogue_start)
+	DialogueManager.dialogue_ended.connect(handle_dialogue_end)	
+
+	can_move = true
+	
+func handle_dialogue_end(resource):
+	can_move = true
+
+func handle_dialogue_start(resource):
+	can_move = false
+
 func get_input():
 	var input = Vector2()
+	
+	if !can_move:
+		return input
 	
 	if Input.is_action_pressed("ui_right"):
 		input.x += 1
@@ -46,7 +62,7 @@ func _process(delta):
 		animation_controller.play("_".join(["idle", current_animation.split("_")[1]]))
 	
 	previous_direction = direction
-
+	
 func _physics_process(delta):
 	var direction = get_input()
 	
