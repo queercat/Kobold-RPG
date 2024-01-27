@@ -1,14 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4sra2y7ktlji"]
 
-<<<<<<< HEAD
 [ext_resource type="TileSet" uid="uid://dsskeyki6wrt" path="res://resources/tilesets/dungeon_tileset.tres" id="1_w3mcs"]
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="2_i7wkd"]
 [ext_resource type="PackedScene" path="res://entities/camera.tscn" id="3_nylgn"]
-=======
-[ext_resource type="TileSet" uid="uid://45ynkpsm0466" path="res://resources/tilesets/dungeon_tileset.tres" id="1_w3mcs"]
-[ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="2_i7wkd"]
-[ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="3_nylgn"]
->>>>>>> 10af41b4113078181ca814f7425f423d0b46b006
 
 [node name="OriTest" type="Node2D"]
 
