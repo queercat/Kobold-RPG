@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://61iuxj50i8rx"]
+
+[ext_resource type="AudioStream" uid="uid://c1pyir2jt0yn7" path="res://audio/1 - NDTV India - Missiles Of Mercy.mp3" id="1_nm4tj"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_nm4tj")
+autoplay = true
