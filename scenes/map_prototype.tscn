@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4hda5j5omv24"]
+[gd_scene load_steps=3 format=3 uid="uid://d4hda5j5omv24"]
 
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="1_k5q0o"]
 [ext_resource type="TileSet" uid="uid://ch334hfr6322c" path="res://resources/tilesets/map_prototype.tres" id="1_ky20x"]
-[ext_resource type="PackedScene" uid="uid://1ftkwofs5285" path="res://prefabs/Item_Potion.tscn" id="3_djkin"]
 
 [node name="MapPrototype" type="Node2D"]
 
@@ -18,7 +17,3 @@ layer_1/tile_data = PackedInt32Array(-393225, 655360, 57, -327689, 655360, 58, -
 [node name="Player" parent="." instance=ExtResource("1_k5q0o")]
 speed = 600
 friction = 0.5
-
-[node name="Item" parent="." instance=ExtResource("3_djkin")]
-position = Vector2(-633, -521)
-scale = Vector2(0.5, 0.5)
