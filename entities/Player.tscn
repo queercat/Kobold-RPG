@@ -313,6 +313,3 @@ shape = SubResource("RectangleShape2D_hal8v")
 sprite_frames = SubResource("SpriteFrames_eeoet")
 animation = &"idle_back"
 autoplay = "idle_front"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(0.2, 0.2)
