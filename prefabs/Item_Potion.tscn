@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1ftkwofs5285"]
 
-[ext_resource type="Script" path="res://scripts/Item.gd" id="1_gc6yp"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_gc6yp"]
 [ext_resource type="Texture2D" uid="uid://c6jpg8xh2jurn" path="res://resources/images/gridbox.png" id="2_ubp1d"]
 
 [node name="Item" type="Node2D"]

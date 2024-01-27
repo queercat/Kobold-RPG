@@ -7,3 +7,5 @@ signal entered_dialogue
 
 func _on_body_entered(body):
 	DialogueManager.show_dialogue_balloon(dialogue, dialogue_entry_point)
+	
+	
