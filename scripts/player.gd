@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var animation_controler: AnimatedSprite2D
+var animation_controller: AnimatedSprite2D
 var previous_direction: Vector2
 
 @export var speed = 200
@@ -8,7 +8,7 @@ var previous_direction: Vector2
 @export var acceleration = 0.1
 
 func _ready():
-	animation_controler = $"AnimatedSprite2D"
+	animation_controller = $"AnimatedSprite2D"
 	previous_direction = Vector2(0, 0)
 
 func get_input():
@@ -34,9 +34,11 @@ func _process(delta):
 		pass
 	elif direction.y != 0 && previous_direction.y != direction.y:
 		if direction.y > 0:
-			animation_controler.play("idle_front")
+			animation_controller.play("running_front")
 		else:
-			animation_controler.play("idle_back")
+			animation_controller.play("running_back")
+	elif direction.x == 0 and direction.y == 0:
+		animation_controller.play("idle_front")
 	
 	previous_direction = direction
 
