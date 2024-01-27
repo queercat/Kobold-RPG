@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var animation_controler: AnimatedSprite2D
+var animation_controller: AnimatedSprite2D
 var previous_direction: Vector2
 
 @export var speed = 200
@@ -8,7 +8,7 @@ var previous_direction: Vector2
 @export var acceleration = 0.1
 
 func _ready():
-	animation_controler = $"AnimatedSprite2D"
+	animation_controller = $"AnimatedSprite2D"
 	previous_direction = Vector2(0, 0)
 
 func get_input():
@@ -29,14 +29,21 @@ func _process(delta):
 	var direction = get_input()
 	
 	# Order matters. Left and right take precedences over top / down.
-	if direction.x != 0 && previous_direction.x != direction.x:
-		# animation_controler.play("walk_right")
-		pass
-	elif direction.y != 0 && previous_direction.y != direction.y:
-		if direction.y > 0:
-			animation_controler.play("idle_front")
-		else:
-			animation_controler.play("idle_back")
+	if (direction.x < 0 and direction.y >= 0):
+		animation_controller.play("running_left")
+	elif (direction.x < 0 and direction.y <= 0):
+		animation_controller.play("running_left")
+	elif (direction.x > 0 and direction.y >= 0):
+		animation_controller.play("running_right")
+	elif (direction.x > 0 and direction .y <= 0):
+		animation_controller.play("running_right")
+	elif direction.y > 0:
+		animation_controller.play("running_front")
+	elif direction.y < 0:
+		animation_controller.play("running_back")
+	else:
+		var current_animation = animation_controller.animation
+		animation_controller.play("_".join(["idle", current_animation.split("_")[1]]))
 	
 	previous_direction = direction
 
