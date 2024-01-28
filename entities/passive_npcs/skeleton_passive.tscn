@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://blk7lm3yp7bgo"]
+
+[ext_resource type="Texture2D" uid="uid://bscgjn7i310h0" path="res://resources/spritesheets/Skeleton Sprite Sheet.png" id="1_j81e8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qswfv"]
+atlas = ExtResource("1_j81e8")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66nhx"]
+atlas = ExtResource("1_j81e8")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcw73"]
+atlas = ExtResource("1_j81e8")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0libl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qswfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66nhx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcw73")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f15yk"]
+size = Vector2(16, 8)
+
+[node name="SkeletonPassive" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0libl")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.841291
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_f15yk")
