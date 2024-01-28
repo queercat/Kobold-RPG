@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cq0v0p1i3cvbb"
+path="res://.godot/imported/wizard_intro.dialogue-37efb27ebc937bc5835b8ab58b979f7e.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/wizard_intro.dialogue"
+dest_files=["res://.godot/imported/wizard_intro.dialogue-37efb27ebc937bc5835b8ab58b979f7e.tres"]
+
+[params]
+
+defaults=true

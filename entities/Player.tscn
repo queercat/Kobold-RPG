@@ -192,7 +192,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_left",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -206,7 +206,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_right",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -229,7 +229,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running_back",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -252,7 +252,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running_front",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -275,7 +275,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running_left",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -298,7 +298,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"running_right",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -311,5 +311,5 @@ shape = SubResource("RectangleShape2D_hal8v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eeoet")
-animation = &"idle_back"
+animation = &"running_right"
 autoplay = "idle_front"

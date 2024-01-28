@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://by5e5wdc8rdmd"]
+[gd_scene load_steps=8 format=3 uid="uid://by5e5wdc8rdmd"]
 
 [ext_resource type="TileSet" uid="uid://bcwawlo4t88sc" path="res://resources/tilesets/dungeon_tileset_jude_alt.tres" id="1_tfavj"]
 [ext_resource type="PackedScene" uid="uid://tb3htm16ux0r" path="res://entities/dialogue_premades/torch_dialogue_box.tscn" id="2_cx7wb"]
+[ext_resource type="PackedScene" uid="uid://c4nnpesxxv30m" path="res://entities/passive_npcs/wizard_passive.tscn" id="3_gn3gk"]
+[ext_resource type="PackedScene" uid="uid://byna0hmjwyt3v" path="res://entities/dialogue_interaction.tscn" id="4_dgxua"]
+[ext_resource type="Resource" uid="uid://cq0v0p1i3cvbb" path="res://resources/dialogue/dungeon/wizard_intro.dialogue" id="5_roohd"]
+[ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="6_dh2bq"]
+[ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="7_h6nhf"]
 
 [node name="Room4" type="Node2D"]
 
@@ -24,3 +29,20 @@ position = Vector2(135, -39)
 
 [node name="TorchDialogueBox4" parent="DialogueAreas" instance=ExtResource("2_cx7wb")]
 position = Vector2(200, -39)
+
+[node name="WizardPassive" parent="." instance=ExtResource("3_gn3gk")]
+position = Vector2(287, -8)
+
+[node name="DialogueArea" parent="WizardPassive" instance=ExtResource("4_dgxua")]
+position = Vector2(16, 9)
+scale = Vector2(0.7, 0.7)
+dialogue = ExtResource("5_roohd")
+dialogue_title = "wizard_intro"
+
+[node name="Player" parent="." instance=ExtResource("6_dh2bq")]
+position = Vector2(1, -6)
+scale = Vector2(1, 1)
+speed = 100
+
+[node name="Camera2D" parent="." instance=ExtResource("7_h6nhf")]
+zoom = Vector2(3, 3)

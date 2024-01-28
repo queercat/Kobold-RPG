@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgtog0jbx6nca"]
+[gd_scene load_steps=8 format=3 uid="uid://dgtog0jbx6nca"]
 
 [ext_resource type="TileSet" uid="uid://bcwawlo4t88sc" path="res://resources/tilesets/dungeon_tileset_jude_alt.tres" id="1_fgi40"]
 [ext_resource type="PackedScene" uid="uid://tb3htm16ux0r" path="res://entities/dialogue_premades/torch_dialogue_box.tscn" id="2_bqanx"]
+[ext_resource type="PackedScene" uid="uid://blk7lm3yp7bgo" path="res://entities/passive_npcs/skeleton_passive.tscn" id="3_m3rir"]
+[ext_resource type="PackedScene" uid="uid://byna0hmjwyt3v" path="res://entities/dialogue_interaction.tscn" id="4_sclhl"]
+[ext_resource type="Resource" uid="uid://bkvqpe6l1pmo2" path="res://resources/dialogue/dungeon/skeleton_clarence.dialogue" id="5_txyge"]
+[ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="6_80wek"]
+[ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="7_eorf2"]
 
 [node name="Room3" type="Node2D"]
 
@@ -24,3 +29,20 @@ position = Vector2(120, -38)
 
 [node name="TorchDialogueBox4" parent="DialogueAreas" instance=ExtResource("2_bqanx")]
 position = Vector2(184, -39)
+
+[node name="SkeletonPassive" parent="." instance=ExtResource("3_m3rir")]
+position = Vector2(152, -25)
+
+[node name="DialogueArea" parent="SkeletonPassive" instance=ExtResource("4_sclhl")]
+position = Vector2(0, 24)
+scale = Vector2(0.3, 0.3)
+dialogue = ExtResource("5_txyge")
+dialogue_title = "skeleton_clarence"
+
+[node name="Player" parent="." instance=ExtResource("6_80wek")]
+position = Vector2(-15, -6)
+scale = Vector2(1, 1)
+speed = 100
+
+[node name="Camera2D" parent="." instance=ExtResource("7_eorf2")]
+zoom = Vector2(3, 3)

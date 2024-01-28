@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bkvqpe6l1pmo2"
+path="res://.godot/imported/skeleton_clarence.dialogue-3f3a7127ba5d194dc4a0c914eef2465f.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/skeleton_clarence.dialogue"
+dest_files=["res://.godot/imported/skeleton_clarence.dialogue-3f3a7127ba5d194dc4a0c914eef2465f.tres"]
+
+[params]
+
+defaults=true

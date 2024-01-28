@@ -1,0 +1,53 @@
+~ wizard_intro
+
+Wizened Wizard: Good heavens!!
+Wizened Wizard: Egads, even!!!
+Wizened Wizard: Here stands in my radient gloomdoominus dungeon the unspelling of my dastardly preogetives!
+Wizened Wizard: How was it you managed past my horde of ghoulish defenders?!
+
+- You mean Ghost and Clarence?
+	Wizened Wizard: Yes! The very two! Did they at least put up a fight? Soften the coming battle I now face??
+	
+	- No
+		Wizened Wizard: I see, you must be a formidable opponent indeed.. 
+		Wizened Wizard: ..Now just a moment..
+		Wizened Wizard: I feel I now recognize you.
+		Wizened Wizard: My good gads...
+		Wizened Wizard: To think I would ever stand before the rumored Grand Archmage Belinidus Barrymore Yelvitrix
+		Wizened Wizard: ..The Infamous G.A.B.B.Y.
+		Wizened Wizard: Well then, my only regret is there will be no witness to this most epic of wizard duels
+		Wizened Wizard: Have At Ye!
+		
+	- Sure
+		Wizened Wizard: Good boys those skellington brothers two..
+		Wizened Wizard: Still, even if scathed, you must have been a formidable opponent to have bested my most gifted champions
+		Wizened Wizard: A wizard of equal if not greater renown than I..
+		Wizened Wizard: ..Now just a moment..
+		Wizened Wizard: I feel I now recognize you.
+		Wizened Wizard: My good gads...
+		Wizened Wizard: To think I would ever stand before the rumored Grand Archmage Belinidus Barrymore Yelvitrix
+		Wizened Wizard: ..The Infamous G.A.B.B.Y.
+		Wizened Wizard: Well then, my only regret is there will be no witness to this most epic of wizard duels
+		Wizened Wizard: For Clarence!
+
+- Don't you know who I am?
+	Wizened Wizard: I'm sorry, my dilapitated form fails me at times, allow me to look closer-
+	Wizened Wizard: My good gads...
+	Wizened Wizard: To think I would ever stand before the rumored Grand Archmage Belinidus Barrymore Yelvitrix
+	Wizened Wizard: ..The Infamous G.A.B.B.Y.
+	Wizened Wizard: Well then, my only regret is there will be no witness to this most epic of wizard duels
+	Wizened Wizard: Have At Ye!
+	
+- That was hardly a horde..
+	Wizened Wizard: You tarnish my good name as Master Summoner?!
+	Wizened Wizard: Who dares such arrogance?!
+	Wizened Wizard: Wait a moment..
+	Wizened Wizard: Ah.. I recognize you now
+	Wizened Wizard: ..Your pride is not unearned.
+	Wizened Wizard: To think I would ever stand before the rumored Grand Archmage Belinidus Barrymore Yelvitrix
+	Wizened Wizard: ..The Infamous G.A.B.B.Y.
+	Wizened Wizard: Well then, my only regret is there will be no witness to this most epic of wizard duels
+	Wizened Wizard: Have At Ye!
+Gabby: Very well..
+INSERT FIGHT
+=> END

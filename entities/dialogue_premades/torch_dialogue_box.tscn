@@ -9,3 +9,4 @@
 scale = Vector2(0.1, 0.1)
 dialogue = ExtResource("2_b3b0k")
 dialogue_title = "torch_dialogue"
+is_one_shot = false

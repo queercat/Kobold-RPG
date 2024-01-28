@@ -1,0 +1,74 @@
+~ skeleton_clarence
+
+???: Hey
+???: My name's Clarence
+???: Im a skeleton
+Clarence: Did you run into my brother Ghost back there?
+Clarence: He's a skeleton too
+
+- Yes
+	Clarence: I didn't hear any fighting back there, he tried to stop you right?
+
+	- Yes
+		Clarence: Just.. Really quitely? Like so quitely that I wouldn't be able to hear you from here, just down the hall?
+		Clarence: Because he's been on this weird bent about not stopping intruders, which is why I ask.
+		...
+		Clarence: You're sure he tried to stop you?
+
+		- Yes
+			Clarence: Well okay..
+			...
+
+		- No
+			Clarence: Okay why not just say so in the first place
+			Clarence: I swear man that guy has one job..
+			Clarence: Anyways..
+			...
+	- No
+		Clarence: What is up with that guy?!
+		Clarence: I mean like we used to be so on it!
+		Clarence: Intruder comes in? Bam! Ghosts on it.
+		Clarence: Nowadays the guy just puts on a weird voice and talks about basic input commands.
+		Clarence: Leaving me to pick up all the slack!
+		Clarence: Well.. Anyways.
+		Clarence: Lets get on with it then..
+
+- No
+	Clarence: He kinda bobs up and down like he's breathing even though he's a skeleton
+	Clarence: Kinda like this
+	...
+	Clarence: You're sure you didn't see him?
+
+	- Yes
+		Clarence: Well he's supposed to be guarding that front room
+		Clarence: I mean thats our whole thing.
+		Clarence: He guards the front room and I stand off back here in case he dies
+		Clarence: That way we get two fights in!
+		Clarence: And two is better than one!
+		Clarence: He just doesn't get it
+		Clarence: Anyways..
+		...
+
+	- No
+		Clarence: You're not sure you didn't see him?
+
+		- I didn't see him.
+			Clarence: Well he's supposed to be guarding that front room
+			Clarence: I mean thats our whole thing.
+			Clarence: He guards the front room I stand off back here in case he dies
+			Clarence: That way we get two fights in!
+			Clarence: And two is better than one!
+			Clarence: He just doesn't get it
+			Clarence: Anyways..
+			...
+
+		- No.
+			Clarence: Okay now I'm confused..
+			Clarence: Let's just get this over with
+
+		- What?
+			Clarence: I'm not really sure
+			...
+			Clarence: We should probably just fight
+INSERT FIGHT HERE
+=> END
