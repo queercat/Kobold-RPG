@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://7lnmuq54b2xq"
+path="res://.godot/imported/passive_skeleton_dialogue.dialogue-34d98a925fa00495e50878e2f4accd56.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/passive_skeleton_dialogue.dialogue"
+dest_files=["res://.godot/imported/passive_skeleton_dialogue.dialogue-34d98a925fa00495e50878e2f4accd56.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dj4hw0dw1nk6"
+path="res://.godot/imported/pile_of_bones_1.dialogue-7332460308ef7b9f1af33d946e22b297.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/pile_of_bones_1.dialogue"
+dest_files=["res://.godot/imported/pile_of_bones_1.dialogue-7332460308ef7b9f1af33d946e22b297.tres"]
+
+[params]
+
+defaults=true

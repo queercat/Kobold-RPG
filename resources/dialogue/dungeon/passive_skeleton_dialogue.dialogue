@@ -4,12 +4,14 @@
 ???: Well howdy-doo there!
 ???: My name's Ghost!
 Ghost: I'm a Skeleton.
-Ghost: One of the only ones down here not rearing to rip that perdy scaley head you got there right outta it's socket. 
+Ghost: One of the only ones down here not rearing to rip that perdy scaley head you got there right outta it's socket!
 Ghost: In fact im the only one I reckon'.
 Ghost: Anyhoo..
 Ghost: Seems you already figured out all that WASD buisness..
 Ghost: Just make sure you remember PLACEHOLDER INPUT TUTORIAL
 Ghost: ..and you should be set and ready to wreck havoc on this'n'here dungeon!
 Ghost: Didja' catch all that hon?
-- Yes => END
+- Yes 
+	Well then get on in there ya' scamp!
+	=> END
 - No => passive_skeleton_dialogue

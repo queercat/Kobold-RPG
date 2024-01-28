@@ -69,7 +69,7 @@ ui_down={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://resources/dialogue/dialogue_prototype.dialogue", "res://resources/dialogue/passive_skeleton_dialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://resources/dialogue/dialogue_prototype.dialogue", "res://resources/dialogue/dungeon/passive_skeleton_dialogue.dialogue", "res://resources/dialogue/dungeon/pile_of_bones_1.dialogue", "res://resources/dialogue/dungeon/torch_dialogue.dialogue")
 
 [rendering]
 

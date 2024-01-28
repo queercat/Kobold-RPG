@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cn3gfu3p3lgcv"
+path="res://.godot/imported/torch_dialogue.dialogue-95227371e5e33c4781dc4a7ff7c0a5f2.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/torch_dialogue.dialogue"
+dest_files=["res://.godot/imported/torch_dialogue.dialogue-95227371e5e33c4781dc4a7ff7c0a5f2.tres"]
+
+[params]
+
+defaults=true

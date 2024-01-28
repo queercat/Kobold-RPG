@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://tb3htm16ux0r"]
+
+[ext_resource type="PackedScene" uid="uid://byna0hmjwyt3v" path="res://entities/dialogue_interaction.tscn" id="1_rbcnp"]
+[ext_resource type="Resource" uid="uid://cn3gfu3p3lgcv" path="res://resources/dialogue/dungeon/torch_dialogue.dialogue" id="2_b3b0k"]
+
+[node name="TorchDialogueBox" type="Node2D"]
+
+[node name="DialogueArea" parent="." instance=ExtResource("1_rbcnp")]
+scale = Vector2(0.1, 0.1)
+dialogue = ExtResource("2_b3b0k")
+dialogue_title = "torch_dialogue"
