@@ -1,0 +1,15 @@
+~ passive_skeleton_dialogue
+
+???: Good gracious ignatius!
+???: Well howdy-doo there!
+???: My name's Ghost!
+Ghost: I'm a Skeleton.
+Ghost: One of the only ones down here not rearing to rip that perdy scaley head you got there right outta it's socket. 
+Ghost: In fact im the only one I reckon'.
+Ghost: Anyhoo..
+Ghost: Seems you already figured out all that WASD buisness..
+Ghost: Just make sure you remember PLACEHOLDER INPUT TUTORIAL
+Ghost: ..and you should be set and ready to wreck havoc on this'n'here dungeon!
+Ghost: Didja' catch all that hon?
+- Yes => END
+- No => passive_skeleton_dialogue
