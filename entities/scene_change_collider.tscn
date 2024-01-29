@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqdb6cuv3x7a8"]
+
+[ext_resource type="Script" path="res://scripts/scene_change_collider.gd" id="1_3teba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l66kn"]
+size = Vector2(16, 32)
+
+[node name="SceneChangeCollider" type="Area2D"]
+script = ExtResource("1_3teba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l66kn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

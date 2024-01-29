@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqg2hepq7r6x5"]
+[gd_scene load_steps=10 format=3 uid="uid://bqg2hepq7r6x5"]
 
 [ext_resource type="TileSet" uid="uid://bcwawlo4t88sc" path="res://resources/tilesets/dungeon_tileset_jude_alt.tres" id="1_fxejw"]
 [ext_resource type="PackedScene" uid="uid://tb3htm16ux0r" path="res://entities/dialogue_premades/torch_dialogue_box.tscn" id="2_0sthh"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bya4blvpp23g8" path="res://entities/Player.tscn" id="3_hapwt"]
 [ext_resource type="Resource" uid="uid://dj4hw0dw1nk6" path="res://resources/dialogue/dungeon/pile_of_bones_1.dialogue" id="4_2xbc5"]
 [ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="4_ex56q"]
+[ext_resource type="PackedScene" uid="uid://pobftpim6kin" path="res://entities/dialogue_premades/wrong_door_dialogue.tscn" id="5_kxuh8"]
+[ext_resource type="PackedScene" uid="uid://bqdb6cuv3x7a8" path="res://entities/scene_change_collider.tscn" id="7_idnnf"]
+[ext_resource type="PackedScene" uid="uid://dgtog0jbx6nca" path="res://scenes/dungeon_section/room_3.tscn" id="8_il0co"]
 
 [node name="Room2" type="Node2D"]
 
@@ -38,9 +41,16 @@ scale = Vector2(0.2, 0.2)
 dialogue = ExtResource("4_2xbc5")
 dialogue_title = "pile_of_bones_1_dialogue"
 
+[node name="WrongDoorDialogue" parent="DialogueAreas" instance=ExtResource("5_kxuh8")]
+position = Vector2(0, -47)
+
 [node name="Player" parent="." instance=ExtResource("3_hapwt")]
 scale = Vector2(1, 1)
 speed = 100
 
 [node name="Camera2D" parent="." instance=ExtResource("4_ex56q")]
 zoom = Vector2(3, 3)
+
+[node name="SceneChangeCollider" parent="." instance=ExtResource("7_idnnf")]
+position = Vector2(209.113, 80.1651)
+target_scene = ExtResource("8_il0co")

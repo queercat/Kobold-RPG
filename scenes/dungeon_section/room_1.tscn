@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfhyt57pie5db"]
+[gd_scene load_steps=9 format=3 uid="uid://bfhyt57pie5db"]
 
 [ext_resource type="TileSet" uid="uid://bcwawlo4t88sc" path="res://resources/tilesets/dungeon_tileset_jude_alt.tres" id="1_fg1sm"]
 [ext_resource type="PackedScene" uid="uid://blk7lm3yp7bgo" path="res://entities/passive_npcs/skeleton_passive.tscn" id="2_cbi37"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://byna0hmjwyt3v" path="res://entities/dialogue_interaction.tscn" id="3_61jlq"]
 [ext_resource type="PackedScene" uid="uid://ibt8jgpvfxwo" path="res://entities/camera.tscn" id="4_w2yyu"]
 [ext_resource type="Resource" uid="uid://7lnmuq54b2xq" path="res://resources/dialogue/dungeon/passive_skeleton_dialogue.dialogue" id="4_wdwj7"]
+[ext_resource type="PackedScene" uid="uid://bqdb6cuv3x7a8" path="res://entities/scene_change_collider.tscn" id="7_65een"]
+[ext_resource type="PackedScene" uid="uid://bqg2hepq7r6x5" path="res://scenes/dungeon_section/room_2.tscn" id="8_osiqk"]
 
 [node name="Room1" type="Node2D"]
 
@@ -30,3 +32,8 @@ speed = 100
 
 [node name="Camera2D" parent="." instance=ExtResource("4_w2yyu")]
 zoom = Vector2(3, 3)
+
+[node name="SceneChangeCollider" parent="." instance=ExtResource("7_65een")]
+position = Vector2(0.010217, 226.93)
+rotation = 1.5708
+target_scene = ExtResource("8_osiqk")

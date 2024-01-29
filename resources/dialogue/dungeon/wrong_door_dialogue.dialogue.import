@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://j0s26ndrlth6"
+path="res://.godot/imported/wrong_door_dialogue.dialogue-3926c15042c3a30d9dbfa7b4d95a8b52.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/dungeon/wrong_door_dialogue.dialogue"
+dest_files=["res://.godot/imported/wrong_door_dialogue.dialogue-3926c15042c3a30d9dbfa7b4d95a8b52.tres"]
+
+[params]
+
+defaults=true
