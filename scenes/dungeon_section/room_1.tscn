@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bfhyt57pie5db"]
+[gd_scene load_steps=17 format=3 uid="uid://bfhyt57pie5db"]
 
 [ext_resource type="TileSet" uid="uid://bcwawlo4t88sc" path="res://resources/tilesets/dungeon_tileset_jude_alt.tres" id="1_fg1sm"]
 [ext_resource type="PackedScene" uid="uid://blk7lm3yp7bgo" path="res://entities/passive_npcs/skeleton_passive.tscn" id="2_cbi37"]
@@ -8,6 +8,59 @@
 [ext_resource type="Resource" uid="uid://7lnmuq54b2xq" path="res://resources/dialogue/dungeon/passive_skeleton_dialogue.dialogue" id="4_wdwj7"]
 [ext_resource type="PackedScene" uid="uid://bqdb6cuv3x7a8" path="res://entities/scene_change_collider.tscn" id="7_65een"]
 [ext_resource type="PackedScene" uid="uid://bqg2hepq7r6x5" path="res://scenes/dungeon_section/room_2.tscn" id="8_osiqk"]
+[ext_resource type="Script" path="res://scripts/cutscene.gd" id="9_erxm7"]
+
+[sub_resource type="Animation" id="Animation_hfbsf"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_j81v5"]
+resource_name = "cutscene_start"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bosg6"]
+_data = {
+"RESET": SubResource("Animation_hfbsf"),
+"cutscene_start": SubResource("Animation_j81v5")
+}
+
+[sub_resource type="Animation" id="Animation_ku42l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wq88y"]
+resource_name = "intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-23, 101), Vector2(0.999998, 25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l1qdq"]
+_data = {
+"RESET": SubResource("Animation_ku42l"),
+"intro": SubResource("Animation_wq88y")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc0s"]
+size = Vector2(128, 20)
 
 [node name="Room1" type="Node2D"]
 
@@ -33,7 +86,29 @@ speed = 100
 [node name="Camera2D" parent="." instance=ExtResource("4_w2yyu")]
 zoom = Vector2(3, 3)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_bosg6")
+}
+
 [node name="SceneChangeCollider" parent="." instance=ExtResource("7_65een")]
 position = Vector2(0.010217, 226.93)
 rotation = 1.5708
 target_scene = ExtResource("8_osiqk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera2D/AnimationPlayer")
+libraries = {
+"": SubResource("AnimationLibrary_l1qdq")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("9_erxm7")
+animation_name = "intro"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 30)
+shape = SubResource("RectangleShape2D_gyc0s")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
